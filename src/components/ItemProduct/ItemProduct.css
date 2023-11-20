@@ -1,0 +1,38 @@
+div.item__body {
+    background-color: rgba(255, 255, 255, 0.878);
+    width: 220px;
+    height: 70%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 60px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+div.item__body:hover {
+    background-color: rgba(144, 144, 144, 0.292);
+}
+
+img.item__img {
+    height: 55%;
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+section.item__info {
+    text-align: center;
+    margin-bottom: 20px;
+    height: 80px;
+    width: 100%;
+}
+
+button.btn_info {
+    height: 36px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 20px;
+    color: white;
+    background-color: red;
+    margin-top: 20px;
+}

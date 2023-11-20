@@ -1,0 +1,90 @@
+[
+    {
+        "nombre": "Pagani Deepsea",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Tevise-Deepsea/azul-negro/Tevise-DEEPSEA-iden1-img1.png"
+        ],
+        "precio": 8000,
+        "id": 101,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "Automatico",
+        "destacado": 0
+    },
+    {
+        "nombre": "Pagani Deepsea",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Tevise-Deepsea/rojo-negro/Tevise-DEEPSEA-iden2-img1.png"
+        ],
+        "precio": 8000,
+        "id": 102,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "Automatico",
+        "destacado": 0
+    },
+    {
+        "nombre": "Pagani Elegant",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Tevise-Elegant/azul-blanco/Tevise-Elegant-iden1-img1.png"
+        ],
+        "precio": 8000,
+        "id": 201,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "quartz",
+        "destacado": 0
+    },
+    {
+        "nombre": "Pagani Elegant",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Tevise-Elegant/negro-blanco/Tevise-Elegant-iden2-img1.png"
+        ],
+        "precio": 8000,
+        "id": 202,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "quartz",
+        "destacado": 0
+    },
+    {
+        "nombre": "Cissden Saphire",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img1.png",
+            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img2.png",
+            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img3.png"
+        ],
+        "precio": 8000,
+        "id": 301,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "Automatico",
+        "destacado": 0
+    },
+    {
+        "nombre": "Pagani V2",
+        "categoria": "Elegante",
+        "imagenes": [
+            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img1.png",
+            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img2.png",
+            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img3.png"
+        ],
+        "precio": 8000,
+        "id": 401,
+        "stock": 10,
+        "description": "descripción del producto...",
+        "color": "negro",
+        "movimiento": "Automatico",
+        "destacado": 0
+    }
+]

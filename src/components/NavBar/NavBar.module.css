@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    justify-content: end;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+
+.nav__item {
+    height: 50%;
+    width: 10%;
+    margin-right: 40px;
+    margin-top: 24px;
+    border-radius: 10px;
+    font-size: 16px;
+}
