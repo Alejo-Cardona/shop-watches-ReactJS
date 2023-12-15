@@ -6,33 +6,47 @@ div.item__body {
     margin-right: 50px;
     margin-bottom: 60px;
     border-radius: 40px;
-    padding: 10px;
+    padding: 16px;
+}
+
+a {
+    text-decoration: none;
 }
 
 div.item__body:hover {
-    background-color: rgba(144, 144, 144, 0.292);
+    background-color: rgba(144, 144, 144, 0.214);
 }
 
 img.item__img {
     height: 55%;
     width: 100%;
     border-radius: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 section.item__info {
     text-align: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 5px;
     height: 80px;
     width: 100%;
 }
 
-button.btn_info {
+p.item__type {
+    font-size: 16px;
+}
+
+p.item__precio {
+    font-size: 24px;
+    margin: 8px;
+}
+
+button.btn__info {
     height: 36px;
     width: 80%;
     font-size: 16px;
     border-radius: 20px;
     color: white;
     background-color: red;
-    margin-top: 20px;
+    margin-top: 5px;
 }

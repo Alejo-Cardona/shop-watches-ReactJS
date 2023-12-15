@@ -1,0 +1,9 @@
+div.cart-shop {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.cart-shop:hover {
+    background-color: rgb(70, 66, 66);
+}

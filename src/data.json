@@ -3,67 +3,77 @@
         "nombre": "Pagani Deepsea",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Tevise-Deepsea/azul-negro/Tevise-DEEPSEA-iden1-img1.png"
+            "../media/imgProducts/Pagani-Deepsea/azul-negro/Pagani-Deepsea-iden1-img1.png",
+            "../media/imgProducts/Pagani-Deepsea/azul-negro/Pagani-Deepsea-iden1-img2.png",
+            "../media/imgProducts/Pagani-Deepsea/Pagani-Deepsea-img3.png"
         ],
-        "precio": 8000,
+        "precio": 80000,
         "id": 101,
         "stock": 10,
-        "description": "descripción del producto...",
-        "color": "negro",
+        "description": "Sumérgete en la esencia del lujo con nuestro reloj Deepsea, un ícono de elegancia y distinción. Con movimiento automático y cristal de zafiro, este reloj personifica el status más alto. Cada detalle, desde su intrincado mecanismo hasta el brillo de la esfera, habla de una sofisticación inigualable. Eleva tu estilo con esta joya, donde la calidad excepcional se encuentra con la exclusividad. Es más que un reloj, es una declaración de tu elegancia sin concesiones.",
+        "color": "azul",
         "movimiento": "Automatico",
-        "destacado": 0
+        "destacado": 1
     },
     {
         "nombre": "Pagani Deepsea",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Tevise-Deepsea/rojo-negro/Tevise-DEEPSEA-iden2-img1.png"
+            "../media/imgProducts/Pagani-Deepsea/rojo-negro/Pagani-Deepsea-iden2-img1.png",
+            "../media/imgProducts/Pagani-Deepsea/rojo-negro/Pagani-Deepsea-iden2-img2.png",
+            "../media/imgProducts/Pagani-Deepsea/Pagani-Deepsea-img3.png"
+
+            
         ],
-        "precio": 8000,
+        "precio": 80000,
         "id": 102,
         "stock": 10,
-        "description": "descripción del producto...",
+        "description": "Sumérgete en la esencia del lujo con nuestro reloj Deepsea, un ícono de elegancia y distinción. Con movimiento automático y cristal de zafiro, este reloj personifica el status más alto. Cada detalle, desde su intrincado mecanismo hasta el brillo de la esfera, habla de una sofisticación inigualable. Eleva tu estilo con esta joya, donde la calidad excepcional se encuentra con la exclusividad. Es más que un reloj, es una declaración de tu elegancia sin concesiones.",
         "color": "negro",
         "movimiento": "Automatico",
-        "destacado": 0
+        "destacado": 1
     },
     {
         "nombre": "Pagani Elegant",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Tevise-Elegant/azul-blanco/Tevise-Elegant-iden1-img1.png"
+            "../media/imgProducts/Pagani-Elegant/azul-blanco/Pagani-Elegant-iden1-img1.png",
+            "../media/imgProducts/Pagani-Elegant/azul-blanco/Pagani-Elegant-iden1-img2.png",
+            "../media/imgProducts/Pagani-Elegant/azul-blanco/Pagani-Elegant-iden1-img3.png"
         ],
-        "precio": 8000,
+        "precio": 30000,
         "id": 201,
         "stock": 10,
-        "description": "descripción del producto...",
-        "color": "negro",
-        "movimiento": "quartz",
-        "destacado": 0
+        "description": "Descubre el refinado arte de la elegancia con nuestro reloj de malla de cuero y movimiento quartz. Este reloj es la personificación del estilo y la sofisticación, marcando un estándar de distinción incomparable. Con una esfera que refleja la precisión del movimiento quartz, cada momento es un recordatorio de tu gusto impecable. La malla de cuero agrega un toque de lujo adicional, elevando este reloj a una expresión de status refinado. Se más que puntual, sé excepcionalmente elegante con este testimonio de calidad y distinción.",
+        "color": "azul",
+        "movimiento": "Quartz",
+        "destacado": 1
     },
     {
         "nombre": "Pagani Elegant",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Tevise-Elegant/negro-blanco/Tevise-Elegant-iden2-img1.png"
+            "../media/imgProducts/Pagani-Elegant/negro-blanco/Pagani-Elegant-iden2-img1.png",
+            "../media/imgProducts/Pagani-Elegant/negro-blanco/Pagani-Elegant-iden2-img2.png",
+            "../media/imgProducts/Pagani-Elegant/negro-blanco/Pagani-Elegant-iden2-img3.png"
         ],
-        "precio": 8000,
+        "precio": 30000,
         "id": 202,
         "stock": 10,
-        "description": "descripción del producto...",
+        "description": "Descubre el refinado arte de la elegancia con nuestro reloj de malla de cuero y movimiento quartz. Este reloj es la personificación del estilo y la sofisticación, marcando un estándar de distinción incomparable. Con una esfera que refleja la precisión del movimiento quartz, cada momento es un recordatorio de tu gusto impecable. La malla de cuero agrega un toque de lujo adicional, elevando este reloj a una expresión de status refinado. Se más que puntual, sé excepcionalmente elegante con este testimonio de calidad y distinción.",
         "color": "negro",
-        "movimiento": "quartz",
-        "destacado": 0
+        "movimiento": "Quartz",
+        "destacado": 1
     },
     {
         "nombre": "Cissden Saphire",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img1.png",
-            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img2.png",
-            "./media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img3.png"
+            "../media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img1.png",
+            "../media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img2.png",
+            "../media/imgProducts/Cissden-Saphire/main-product/Cissden-Saphire-img3.png"
         ],
-        "precio": 8000,
+        "precio": 60000,
         "id": 301,
         "stock": 10,
         "description": "descripción del producto...",
@@ -75,11 +85,11 @@
         "nombre": "Pagani V2",
         "categoria": "Elegante",
         "imagenes": [
-            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img1.png",
-            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img2.png",
-            "./media/imgProducts/Pagani-V2/main-product/Pagani-V2-img3.png"
+            "../media/imgProducts/Pagani-V2/main-product/Pagani-V2-img1.png",
+            "../media/imgProducts/Pagani-V2/main-product/Pagani-V2-img2.png",
+            "../media/imgProducts/Pagani-V2/main-product/Pagani-V2-img3.png"
         ],
-        "precio": 8000,
+        "precio": 90000,
         "id": 401,
         "stock": 10,
         "description": "descripción del producto...",

@@ -1,0 +1,11 @@
+.info-cart {
+    display: block;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    height: 80%;
+    width: 60%;
+    background-color: #ececec;
+    padding: 40px;
+}
