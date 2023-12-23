@@ -1,0 +1,16 @@
+.master_container {
+    box-shadow: 12px 2px 18px rgba(0, 0, 0, 0.1);
+}
+
+.img__check {
+    height: 50%;
+}
+
+.input__info {
+    height: 40px;
+}
+
+.total__info {
+    height: 80px;
+    background-color: rgba(225, 224, 224, 0.729);
+}

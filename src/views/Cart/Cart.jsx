@@ -11,11 +11,12 @@ import { CartContext } from "../../contexts/CartContext"
 import { useContext } from "react"
 
 
+
 function Cart() {
 
-    const { itemsArr, setItemsArr, arrayL, sumarCart, clear } = useContext(CartContext)
+    const { itemsArr, setItemsArr, arrayL, sumarCart, clear, removeItem } = useContext(CartContext)
 
-    console.log('Contenido de itemsArr:', itemsArr);
+    const costoEnvio = 3200
 
     if(!arrayL) {
         return ( 
@@ -28,6 +29,7 @@ function Cart() {
         <>
             <section className="info-cart container rounded">
                 <p className='fs-4'>Valor total del carrito: {'$' + sumarCart()}</p>
+                <p className='fs-4'>Costo de envio: {'$' + ( sumarCart() + costoEnvio )}</p>
                 <p className='fs-4'>Total de roductos: {arrayL}</p>
                 <div className='mt-4'>
                     <Button variant="dark me-4" onClick={clear}> 
@@ -40,14 +42,23 @@ function Cart() {
             </section>
             <ItemContainer>
                 {itemsArr.map((element) => (
-                    <ItemProduct
-                        key={element.id}
-                        imagenes={element.imagenes[0]}
-                        nombre={element.nombre}
-                        precio={element.precio}
-                        movimiento={element.movimiento}
-                        id={element.id}
-                    />
+                    <>  
+                        <div className='d-grid text-center row align-items-center'>
+                            <ItemProduct
+                                key={element.id}
+                                imagenes={element.imagenes[0]}
+                                nombre={element.nombre}
+                                precio={element.precio}
+                                movimiento={element.movimiento}
+                                id={element.id}
+                            /> 
+                            <div>
+                                <Button variant="dark" onClick={() => removeItem(element.id)} className='col-8'>
+                                        Eliminar del carrito
+                                </Button>
+                            </div>
+                        </div>
+                    </>
                 ))}
             </ItemContainer>
         </>

@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react';
+/* Custom */
+import styles from './CompleteColl.css'
+
 import ItemContainer from '../../components/ItemContainer/ItemContainer';
 import ItemProduct from '../../components/ItemProduct/ItemProduct';
-//import productos from '../../data.json';
-import { Link } from 'react-router-dom';
-
-/* Firebase */
+import { useEffect, useState } from 'react';
 import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore';
 
-function Home() {
+function CompleteColl() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -15,7 +14,6 @@ function Home() {
         const db = getFirestore();
         const q = query(
             collection(db, "items"),
-            where("destacado", "==", 1)
         );
 
         try {
@@ -36,12 +34,11 @@ function Home() {
     };
 
     obtenerProductosDestacados();
-    }, []);
+  }, []);  // Si no necesitas dependencias, puedes dejar el array de dependencias vacío
 
-    return(
-    <>  
-        <img src='/media/imgMarca/Grandeur_Watches_portada_pequena.png' className='mb-5'></img>
-        <h2 className='mb-3 mt-3'>Nuestros Relojes</h2>
+    return (
+    <>
+        <h2 className='mb-5 mt-5'>Nuestros Relojes</h2>
         <ItemContainer>
         {products.length === 0 ? (
         <section className='container d-flex justify-content-center'>
@@ -65,22 +62,8 @@ function Home() {
             ))
         )}
         </ItemContainer>
-        <section className='container d-flex justify-content-center'>
-            <div className='col-6 position-relative'>
-                <Link to={'/categoria/Elegante'}>
-                    <img className=' img-fluid h-70' src="../media/imgMarca/Empresario_mirando_reloj.jpg" alt="" />
-                </Link>
-                <h3 className='text-center text-light fs-1 p-2 bg-dark'>ELEGANTE</h3>
-            </div>
-            <div className='col-6'>
-                <Link to={'/categoria/Casual'}>
-                    <img className='img-fluid h-70' src="../media/imgMarca/Empresario-manejando-auto-reloj.jpg" alt="" />
-                </Link>
-                <h3 className='text-center text-light fs-1 p-2 bg-dark'>CASUAL</h3>
-            </div>
-        </section>
     </>
-    )
+);
 }
 
-export default Home;
+export default CompleteColl

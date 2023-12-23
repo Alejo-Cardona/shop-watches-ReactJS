@@ -2,7 +2,7 @@ import styles from './ItemContainer.css'
 
 // Componente encargado de mostrar una lista de productos
 const ItemContainer = (props) => {
-    // const vari = useContext(cartContext)
+    
     return (
         <section className='products__section container'>
             <div className='products__container'>

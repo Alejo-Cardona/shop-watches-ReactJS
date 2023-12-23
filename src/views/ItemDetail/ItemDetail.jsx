@@ -1,27 +1,70 @@
 import { useParams } from 'react-router-dom';
 import styles from './ItemDetail.css'
-import data from '../../data.json'
 import Carousel from 'react-bootstrap/Carousel';
 import ItemContainer from '../../components/ItemContainer/ItemContainer';
 import ItemProduct from '../../components/ItemProduct/ItemProduct';
-import productos from '../../data.json';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
+import Checkout from "../../components/Checkout/Checkout";
 
 /* Contexts */
 import { CartContext } from '../../contexts/CartContext';
 
+/* Firestore */
+import { getFirestore, getDoc, doc, collection } from 'firebase/firestore';
+
+/* Toastify */
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css";
+
 const ItemDatail = ({ Items }) => {
+    const [item, setItem] = useState(null);
+    const [Check, setCheck] = useState(false);
     const { addItem } = useContext(CartContext)
     const { id } = useParams()
-    const item = data.find(product => product.id === parseInt(id))
+
+    useEffect(() => {
+        const db = getFirestore();
+        const refDoc = doc(db, "items", id);
+
+        getDoc(refDoc).then((snapshot) => {
+            setItem({ id: snapshot.id, ...snapshot.data() })
+        })
+    })
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [ id ])
 
+    useEffect(() => {
+        window.scrollTo(0, 700)
+    }, [ Check ])
+
     if (!item) {
         return <div>Producto no encontrado</div>;
     }
+
+    const handleClickCart = () => {
+        addItem(item);
+    
+        // Configuración de Toastify
+        Toastify({
+            text: "Agregaste este producto al carrito",
+            duration: 3000,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            style: {
+            background: "#b70f0a",
+            },
+            onClick: function () {
+                // Callback después de hacer clic en el toast
+                
+            },
+            }).showToast();
+        };
+
+        const handleClickBuy = () => {
+            setCheck(true)
+        }
 
     return (
     <>
@@ -50,29 +93,19 @@ const ItemDatail = ({ Items }) => {
                 <p>Color: {item.color}</p>
                 <p>{item.description}</p>
                 <section className='container d-flex justify-content-center'>
-                    <button className='btn__comprar me-2'> 
+                    <button className='btn__comprar me-2' onClick={handleClickBuy}> 
                         <span>Comprar</span>
                     </button>
-                    <button className='btn__comprar' onClick={() => addItem(item)}> 
-                        <span>Agregar al Carritor</span>
+                    <button className='btn__comprar' onClick={handleClickCart}> 
+                        <span>Agregar al Carrito</span>
                     </button>
                 </section>
             </section>           
         </section>
-        <ItemContainer>
-        {productos.map( product => { if (product.destacado === 1) {
-            return(
-            <ItemProduct
-                key={product.id}
-                imagenes={product.imagenes[0]}
-                nombre={product.nombre}
-                precio={product.precio}
-                movimiento={product.movimiento}
-                id={product.id}
-            />)}
-            }
+        {
+            Check && (
+                <Checkout item={item} />
             )}
-        </ItemContainer>
         
         </>
     )
