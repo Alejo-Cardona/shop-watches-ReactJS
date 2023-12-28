@@ -15,6 +15,7 @@ import ItemDatail from './views/ItemDetail/ItemDetail';
 import Cart from './views/Cart/Cart'
 import CompleteColl from './views/CompleteColl/CompleteColl';
 import ItemByCategory from './views/ItemsByCategory/ItemsByCategory';
+import Checkout from './components/Checkout/Checkout';
 
 /* Contexts */
 import CartState from './contexts/CartContext';

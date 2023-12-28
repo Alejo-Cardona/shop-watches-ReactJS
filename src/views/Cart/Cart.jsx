@@ -4,19 +4,27 @@ import styles from './Cart.css'
 /* Components */ 
 import ItemContainer from "../../components/ItemContainer/ItemContainer"
 import ItemProduct from "../../components/ItemProduct/ItemProduct"
+import Checkout from '../../components/Checkout/Checkout'
 import { Button } from 'react-bootstrap'
 
 /* Contexts */ 
 import { CartContext } from "../../contexts/CartContext"
-import { useContext } from "react"
+import { useContext, useState, useEffect } from "react"
 
 
 
 function Cart() {
 
-    const { itemsArr, setItemsArr, arrayL, sumarCart, clear, removeItem } = useContext(CartContext)
+    const { itemsArr, setItemsArr, arrayL, sumarCart, clear, removeItem, contarProductosRepetidos } = useContext(CartContext)
 
-    const costoEnvio = 3200
+    const [checkCart, setCheckCart] = useState(false);
+
+    const unidades = contarProductosRepetidos(itemsArr)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [ checkCart ])
+
 
     if(!arrayL) {
         return ( 
@@ -24,18 +32,21 @@ function Cart() {
         )
     }
 
-
     return (
         <>
+            {
+                checkCart && (
+                    <Checkout item={itemsArr} unidades={unidades} check={checkCart}/>
+            )}
             <section className="info-cart container rounded">
                 <p className='fs-4'>Valor total del carrito: {'$' + sumarCart()}</p>
-                <p className='fs-4'>Costo de envio: {'$' + ( sumarCart() + costoEnvio )}</p>
+                <p className='fs-4'>Costo de envio: <span className="fw-normal fs-4 ms-2 text-success fw-bold">Envio Gratis!</span></p>
                 <p className='fs-4'>Total de roductos: {arrayL}</p>
                 <div className='mt-4'>
                     <Button variant="dark me-4" onClick={clear}> 
                         Vaciar Carrito
                     </Button>
-                    <Button variant="danger">
+                    <Button variant="danger" onClick={() => setCheckCart(true)}>
                         Realizar Compra
                     </Button>
                 </div>

@@ -5,6 +5,7 @@ import ItemContainer from '../../components/ItemContainer/ItemContainer';
 import ItemProduct from '../../components/ItemProduct/ItemProduct';
 import { useContext, useEffect, useState, useRef } from 'react';
 import Checkout from "../../components/Checkout/Checkout";
+import ItemCounter from '../../components/ItemCounter/ItemCounter';
 
 /* Contexts */
 import { CartContext } from '../../contexts/CartContext';
@@ -35,36 +36,9 @@ const ItemDatail = ({ Items }) => {
         window.scrollTo(0, 0)
     }, [ id ])
 
-    useEffect(() => {
-        window.scrollTo(0, 700)
-    }, [ Check ])
-
     if (!item) {
         return <div>Producto no encontrado</div>;
     }
-
-    const handleClickCart = () => {
-        addItem(item);
-    
-        // Configuración de Toastify
-        Toastify({
-            text: "Agregaste este producto al carrito",
-            duration: 3000,
-            gravity: "bottom", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            style: {
-            background: "#b70f0a",
-            },
-            onClick: function () {
-                // Callback después de hacer clic en el toast
-                
-            },
-            }).showToast();
-        };
-
-        const handleClickBuy = () => {
-            setCheck(true)
-        }
 
     return (
     <>
@@ -92,20 +66,10 @@ const ItemDatail = ({ Items }) => {
                 <p className='fs-5 text-center'>{item.movimiento}</p>
                 <p>Color: {item.color}</p>
                 <p>{item.description}</p>
-                <section className='container d-flex justify-content-center'>
-                    <button className='btn__comprar me-2' onClick={handleClickBuy}> 
-                        <span>Comprar</span>
-                    </button>
-                    <button className='btn__comprar' onClick={handleClickCart}> 
-                        <span>Agregar al Carrito</span>
-                    </button>
-                </section>
             </section>           
         </section>
-        {
-            Check && (
-                <Checkout item={item} />
-            )}
+        <label className='fw-bold fs-4 text-center d-flex justify-content-center'>Cantidad</label>
+        <ItemCounter item={item}/>
         
         </>
     )
