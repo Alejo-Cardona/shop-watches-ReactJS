@@ -1,21 +1,14 @@
 import { useParams } from 'react-router-dom';
 import styles from './ItemDetail.css'
 import Carousel from 'react-bootstrap/Carousel';
-import ItemContainer from '../../components/ItemContainer/ItemContainer';
-import ItemProduct from '../../components/ItemProduct/ItemProduct';
 import { useContext, useEffect, useState, useRef } from 'react';
-import Checkout from "../../components/Checkout/Checkout";
 import ItemCounter from '../../components/ItemCounter/ItemCounter';
 
 /* Contexts */
 import { CartContext } from '../../contexts/CartContext';
 
 /* Firestore */
-import { getFirestore, getDoc, doc, collection } from 'firebase/firestore';
-
-/* Toastify */
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css";
+import { getFirestore, getDoc, doc } from 'firebase/firestore';
 
 const ItemDatail = ({ Items }) => {
     const [item, setItem] = useState(null);

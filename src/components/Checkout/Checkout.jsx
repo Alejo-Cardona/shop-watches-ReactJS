@@ -2,7 +2,6 @@ import { useState, useContext } from "react"
 import styles from "./Checkout.css"
 import { Button } from "react-bootstrap"
 import ItemCounter from "../ItemCounter/ItemCounter"
-import CheckoutCounter from "../CheckoutCounter/CheckoutCounter"
 
 /* FireBase */
 import { getFirestore, doc, updateDoc, collection, addDoc } from "firebase/firestore"
